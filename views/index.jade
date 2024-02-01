@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each message in messages
+      li user: #{message.user}
+      li messages: #{message.text} 
+      li added: #{message.added} 
+      hr
+
+  // Anchor tag outside the loop
+  a(href="/new") Click here to add new messages
